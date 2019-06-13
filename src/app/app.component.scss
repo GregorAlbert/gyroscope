@@ -1,0 +1,17 @@
+.spotlight-wrapper {
+  cursor: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://source.unsplash.com/random");
+  background-size: cover;
+}
+
+.spotlight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(circle, transparent 160px, rgba(0, 0, 0, 0.85) 200px);
+  box-shadow: inset 0 0 50px 50pc rgba(0, 0, 0, 0.05);
+}
+
