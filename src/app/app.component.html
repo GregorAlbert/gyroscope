@@ -1,5 +1,5 @@
 <h1>gyroscope app</h1>
-ABSOLUTE {{deviceOrientationEvent ? (deviceOrientationEvent.absolute | json) : "X"}} <br>
-ALPHA {{deviceOrientationEvent ? (deviceOrientationEvent.alpha | json) : "X"}} <br>
-BETA {{deviceOrientationEvent ? (deviceOrientationEvent.beta | json) : "X"}} <br>
-GAMMA {{deviceOrientationEvent ? (deviceOrientationEvent.gamma | json) : "X"}}
+ABSOLUTE {{deviceOrientationEvent ? deviceOrientationEvent.absolute : "X"}} <br>
+ALPHA {{deviceOrientationEvent ? deviceOrientationEvent.alpha : "X"}} <br>
+BETA {{deviceOrientationEvent ? deviceOrientationEvent.beta : "X"}} <br>
+GAMMA {{deviceOrientationEvent ? deviceOrientationEvent.gamma : "X"}}
