@@ -11,7 +11,7 @@ export class AppComponent {
 
   @HostListener('window:deviceorientation', ['$event'])
   onDeviceOrientationChange(deviceOrientationEvent: DeviceOrientationEvent) {
-    this.deviceOrientationEvent = deviceOrientationEvent.gamma;
+    this.deviceOrientationEvent = deviceOrientationEvent;
   }
 }
 
