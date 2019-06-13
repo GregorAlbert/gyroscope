@@ -7,11 +7,11 @@ import {Component, HostListener} from '@angular/core';
 })
 export class AppComponent {
 
-  public info = 'empty';
+  public deviceOrientationEvent;
 
   @HostListener('window:deviceorientation', ['$event'])
-  onClick(targetElement: any) {
-    this.info = targetElement.alpha + ' ' + targetElement.beta + ' ' + targetElement.gamma;
+  onDeviceOrientationChange(deviceOrientationEvent: DeviceOrientationEvent) {
+    this.deviceOrientationEvent = deviceOrientationEvent.gamma;
   }
 }
 
