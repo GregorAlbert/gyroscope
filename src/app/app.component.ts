@@ -31,8 +31,8 @@ export class AppComponent {
   private updateSpotlight(deviceOrientationEvent: DeviceOrientationEvent) {
     const windowWidthMultiplicator = window.innerWidth / 180;
     const windowHeightMultiplicator = window.innerHeight / 180;
-    const mapX = ((deviceOrientationEvent.gamma % 90) + 90) * windowWidthMultiplicator;
-    const mapY = ((deviceOrientationEvent.beta % 90) + 90) * windowHeightMultiplicator;
+    const mapX = -(deviceOrientationEvent.gamma % 90) * windowWidthMultiplicator + 90 * windowWidthMultiplicator;
+    const mapY = -(deviceOrientationEvent.beta % 90) * windowHeightMultiplicator + 90 * windowWidthMultiplicator;
     this.spotlight.nativeElement.style.backgroundImage =
       `radial-gradient(circle at ${mapX / window.innerWidth * 100}% ${
       mapY / window.innerHeight * 100}%, transparent 160px, rgba(0, 0, 0, 0.85) 200px)`;
